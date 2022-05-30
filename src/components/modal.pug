@@ -1,37 +1,63 @@
-include ../components/input-button.pug 
+include ../components/button.pug 
+include ../components/input.pug 
+
 
 #modal1.modal
   .modal__container
     .modal__body
       .modal__head
-        h2 Пользуйтесь AvirentCRM БЕСПЛАТНО
-        p Среднее время регистрации 2 минуты
+        h2 Быстро оставить заявку
+        p Свяжемся с вами в течении 5 минут
       .modal__main
-      .modal__form(action='')
-        +input-button('Попробовать бесплатно', 's', 'tel')
-
+        form.modal__form(action='')
+          +input('Введите ваше имя')
+          +input('Введите контактный телефон', 'tel')
+          +button('ЗАБРОНИРОВАТЬ МЕСТО')
+          p Нажимая на кнопку вы соглашаетесь с условиями обработки данных и <a href="/" target="_blank">политикой конфиденциальности</a>
 #modal2.modal
   .modal__container
     .modal__body
       .modal__head
-        h2 Заполните форму ниже,
-        p и наш менеджер перезвонит вам в ближайшее время
-      .modal__form(action='')
-        +input-button('Оставить заявку', 's', 'tel')
-
+        h2 Запишитесь на бесплатное пробное занятие 
+        p Количество мест ограничено
+      .modal__main
+        form.modal__form(action='')
+          +input('Введите ваше имя')
+          +input('Введите контактный телефон', 'tel')
+          +button('ЗАКАЗАТЬ ЗВОНОК')
+          p Нажимая на кнопку вы соглашаетесь с условиями обработки данных и <a href="/" target="_blank">политикой конфиденциальности</a>
 #modal3.modal
   .modal__container
     .modal__body
       .modal__head
-        h2 Спасибо!
-        p Прайс скоро придёт вам на телефон
-      .modal__main  
-        p А пока посмотрите короткое видео о всех возможностях AvirentCRM
-        a(href="https://youtu.be/Xj6pj12ywN8" target="_blank" class="video")
-          .play-wrap
-
+        h2 Подробнее о наших скидках 
+        p вы можете узнать  по телефону
+      .modal__main
+        form.modal__form(action='')
+          +input('Введите ваше имя')
+          +input('Введите контактный телефон', 'tel')
+          +button('ЗАКАЗАТЬ ЗВОНОК')
+          p Нажимая на кнопку вы соглашаетесь с условиями обработки данных и <a href="/" target="_blank">политикой конфиденциальности</a>
 #modal4.modal
   .modal__container
     .modal__body
-      .modal__main.iframe
-        //- Сам iframe с видео лежит в modal.js, во имя lazy load
+      .modal__head
+        h2 Старт обучения совсем скоро!
+        p Забронируйте место бесплатно
+      .modal__main
+        form.modal__form(action='')
+          +input('Введите ваше имя')
+          +input('Введите контактный телефон', 'tel')
+          +button('ЗАБРОНИРОВАТЬ МЕСТО')
+          p Нажимая на кнопку вы соглашаетесь с условиями обработки данных и <a href="/" target="_blank">политикой конфиденциальности</a>
+#modal5.modal
+  .modal__container
+    .modal__body
+      .modal__head
+        h2 Ваша заявка принята!
+      .modal__main
+        p Мы свяжемся с вами в ближайшее время
+        hr
+        p или позвоните нам сами
+        a(href="tel:+74955502148") +7 (495) 550-21-48
+        include ../components/messengers.pug 

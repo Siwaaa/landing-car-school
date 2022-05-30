@@ -17,9 +17,10 @@
     top: 2%;
     right: 5%;
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     z-index: 100;
+    background: url(../img/close.svg) 50%/contain no-repeat;
   }
 
   &__container {
@@ -35,21 +36,11 @@
     background-color: #fefefe;
     cursor: auto;
 
-    #modal1 & {
-      position: relative;
-      left: 0;
-      top: 0;
-      transform: translate(0);
-      margin: 2% auto;  
-    }
-
-    #modal4 & {
-      width: 90%;
-      max-width: none;
-    }
-
     @media (--md) {
       width: 80%;
+    }
+    @media (--xs) {
+      width: 90%;
     }
   }
 
@@ -67,14 +58,18 @@
     text-align: center;
 
     @media (--sm) {
-      padding: 15px;
+      padding: 25px 15px;
     }
   }
 
   &__head {
+    color: var(--color-blue);
     & > h2  {
       font-size: var(--fz-h2);
       font-weight: 600;
+    }
+    & > p {
+      margin-top: 20px;
     }
   }
 
@@ -95,18 +90,26 @@
       font-weight: 500;
       font-size: var(--fz-h4);
     }
-    & > .video {
-      position: relative;
-      left: auto;
-      top: auto;
-      margin-bottom: 30px;
-    }
-    & > iframe {
-      width: 100%;
-    }
   }
 
   &__form {
-    width: 100%;
+    width: min-content;
+
+    & > .input {
+      width: 88%;
+      margin-bottom: 20px;
+    }
+    & > p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #C0C0C0;
+      & > a {
+        text-decoration: underline;
+      }
+
+      @media (--sm) {
+        font-size: 12px;
+      }
+    }
   }
 }

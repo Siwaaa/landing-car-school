@@ -1,7 +1,7 @@
 mixin button(title, type="button", href)
   if type!="link"
     .btn
-      button(type=type, class='btn__container' )
+      button(type=type, class='btn__container' )&attributes(attributes)
         .btn__content 
           img(src="./img/btn.svg", alt="")
           p!= title

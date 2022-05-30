@@ -6,10 +6,11 @@
  *
  *  */ 
 const modals = [
-  document.getElementById('modal1'), // попап ухода с сайта
+  document.getElementById('modal1'), // Быстро оставь номер
   document.getElementById('modal2'), // Оставьте номер, мы перезвоним
   document.getElementById('modal3'), // Спасибо, скоро вышлем прайс
-  document.getElementById('modal4') // Видео
+  document.getElementById('modal4'), // Видео
+  document.getElementById('modal5') // Видео
 ]
 
 const triggersForModal_1 = document.querySelectorAll("[data-open-modal_1]")

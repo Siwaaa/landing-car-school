@@ -1,16 +1,20 @@
 .input {
   display: inline-block;
-  font-size: var(--fz);
-  color: #fff;
-  padding: 10px 20px;
-  border: 1px solid #FFFFFF;
-  border-radius: var(--border-radius);
+  padding: 30px 20px;
+  font-size: var(--fz-btn);
+  color: var(--color-gray);
+  border: 1px solid #BBB;
+  border-radius: 8px;
 
   &::placeholder {
-    color: #fff;
+    color: var(--color-gray);
   }
 
   &:hover {
     cursor: text;
+  }
+
+  @media (--lg) {
+    padding: 20px 10px;
   }
 }
