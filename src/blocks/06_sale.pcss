@@ -1,31 +1,70 @@
 .sale {
+  &__container {
+    padding-top: var(--container-padding-h);
+  }
   &__body {
-    --height-sale: 376px;
     position: relative;
+    overflow: hidden;
     padding: 60px;
     background: #FAFBFF;
     border: 4px solid #8CADEF;
     border-radius: calc(2 * var(--border-radius));
-    height: calc(var(--height-sale) * 1.05);
+    height: 386px;
     z-index: 0;
 
     & > h2 {
+      position: relative;
+      width: 61%;
       font-weight: 600;
       font-size: var(--fz-h2);
       line-height: 1.2;
       margin-bottom: 40px;
+      z-index: 10;
 
       & > strong {
         color: #5D8FF1;
       }
-    }
 
+      @media (--lg) {
+        width: 100%;
+      }
+      @media (--xs) {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+    }
     & > img {
       position: absolute;
       bottom: -2px;
       right: 8px;
       object-fit: contain;
-      height: var(--height-sale);
+      object-position: bottom;
+      height: 95%;
+      width: 46%;
+
+      @media (--xs) {
+        position: relative;
+        bottom: -20px;
+        right: auto;
+        width: auto;
+        height: 205px;
+      }
+    }
+
+    @media (--xl) {
+      height: 420px;
+      padding: 40px;
+    }
+    @media (--lg) {
+      height: 380px;
+    }
+    @media (--sm) {
+      padding: 15px;
+    }
+    @media (--xs) {
+      height: auto;
+      padding: 15px 10px;
+      text-align: center;
     }
   }
 }

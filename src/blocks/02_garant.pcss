@@ -16,6 +16,16 @@
       text-align: center;
       border: 2px solid #EEEEEE;
       border-radius: var(--border-radius);
+
+      @media (--lg) {
+        padding: 20px;
+      }
+      @media (--md) {
+        font-size: 16px;
+      }
+      @media (--sm) {
+        display: none;
+      }
     }
   }
 }
@@ -24,14 +34,33 @@
   display: flex;
   
   &__left {
+    flex-basis: 50%;
     margin-right: 40px;
     & > img {
       object-fit: contain;
       width: 100%;
     }
+    @media (--lg) {
+      margin-right: 30px;
+    }
+    @media (--sm) {
+      display: none;
+    }
   }
   &__right {
+    --fz-uslugi-h2: 28px;
+
     flex-basis: 50%;
+    @media (--xl) {
+      --fz-uslugi-h2: 24px;
+    }
+    @media (--lg) {
+      flex-basis: 46%;
+    }
+    @media (--sm) {
+      flex-basis: 100%;
+      --fz-uslugi-h2: 20px;
+    }
   }
 
   &__usluga {
@@ -46,8 +75,30 @@
     }
     & > h2 {
       font-weight: 700;
-      font-size: 28px;
+      font-size: var(--fz-uslugi-h2);
       color: #424242;
+    }
+    @media (--sm) {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    display: none;
+
+    & > img {
+      object-fit: contain;
+      width: 100%;
+    }
+    @media (--sm) {
+      display: block;
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
+    }
+    @media (--xs) {
+      width: 85%;
     }
   }
   &__price {
@@ -70,11 +121,18 @@
 
         color: #B5B8C0;
         margin-bottom: 10px;
+
+        @media (--lg) {
+          margin-bottom: 3px;
+        }
+        @media (--md) {
+          font-size: 12px;
+        }
       }
       & strong {
         display: inline-block;
         font-weight: 700;
-        font-size: 28px;
+        font-size: var(--fz-uslugi-h2);
         text-transform: uppercase;
 
         color: #343D58;
@@ -85,6 +143,10 @@
       background: #F1F3F8;
       border-radius: var(--border-radius);
       margin-right: 25px;
+
+      @media (--xl) {
+        width: auto;
+      }
     }
     &-sale {
       max-width: 334px;
@@ -126,7 +188,7 @@
     margin-bottom: 60px;
     & > h4 {
       font-weight: 700;
-      font-size: 26px;
+      font-size: var(--fz-uslugi-h2);
       line-height: 32px;
       margin-bottom: 20px;
     }
@@ -147,6 +209,10 @@
         margin-right: 20px;
       }
     }
+
+    @media (--xl) {
+      margin-bottom: 40px;
+    }
   }
   &__btn {
     display: flex;
@@ -164,13 +230,29 @@
         text-transform: uppercase;
         color: #B5B8C0;
         margin-bottom: 5px;
+
+        @media (--md) {
+          font-size: 12px;
+        }
       }
       & > a {
         font-weight: 700;
         font-size: 22px;
         text-align: center;
         letter-spacing: 0.1em;
+
+        @media (--md) {
+          font-size: 18px;
+        }
       }
+      @media (--xl) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    @media (--xl) {
+      flex-direction: column;
     }
   }
 }

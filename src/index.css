@@ -37,6 +37,7 @@ b {
   @media (--lg) {
     --fz-h2: 28px;
     --fz-btn: 14px;
+    --container-padding-h: 60px;
   }
   @media (--md) {
     --fz-btn: 14px;

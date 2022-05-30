@@ -1,5 +1,7 @@
 .maps {
-
+  &__container {
+    padding-bottom: var(--container-padding-h);
+  }
   &__body {
     position: relative;
   }
@@ -7,6 +9,13 @@
   &__map {
     height: 496px;
     background-color: red;
+
+    @media (--sm) {
+      height: 350px;
+    }
+    @media (--xs) {
+      height: 190px;
+    }
   }
 
   &__info {
@@ -26,7 +35,7 @@
 
   & > h4 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: var(--fz-h4);
     text-align: center;
     margin-bottom: 20px;
   }
@@ -40,8 +49,36 @@
       margin-bottom: 0;
       line-height: 1.1;
     }
+    @media (--xs) {
+      width: 190px;
+      margin-bottom: 15px;
+    }
   }
   &__text {
     margin-left: 15px;
+    @media (--xs) {
+      margin-left: 30px;
+    }
+  }
+
+  @media (--lg) {
+    padding: 30px 50px;
+  }
+  @media (--md) {
+    left: 3%;
+  }
+  @media (--sm) {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @media (--xs) {
+    margin-left: var(--container-padding-w);
+    margin-right: var(--container-padding-w);
   }
 }
