@@ -1,0 +1,9 @@
+mixin button(title, type="button", href)
+  if type!="link"
+    .btn
+      button(type=type, class='btn__container' )
+        .btn__content 
+          img(src="./img/btn.svg", alt="")
+          p!= title
+  else
+    a(href=href target="_blank" class='btn')= title 

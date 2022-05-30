@@ -1,0 +1,37 @@
+include ../components/input-button.pug 
+
+#modal1.modal
+  .modal__container
+    .modal__body
+      .modal__head
+        h2 Пользуйтесь AvirentCRM БЕСПЛАТНО
+        p Среднее время регистрации 2 минуты
+      .modal__main
+      .modal__form(action='')
+        +input-button('Попробовать бесплатно', 's', 'tel')
+
+#modal2.modal
+  .modal__container
+    .modal__body
+      .modal__head
+        h2 Заполните форму ниже,
+        p и наш менеджер перезвонит вам в ближайшее время
+      .modal__form(action='')
+        +input-button('Оставить заявку', 's', 'tel')
+
+#modal3.modal
+  .modal__container
+    .modal__body
+      .modal__head
+        h2 Спасибо!
+        p Прайс скоро придёт вам на телефон
+      .modal__main  
+        p А пока посмотрите короткое видео о всех возможностях AvirentCRM
+        a(href="https://youtu.be/Xj6pj12ywN8" target="_blank" class="video")
+          .play-wrap
+
+#modal4.modal
+  .modal__container
+    .modal__body
+      .modal__main.iframe
+        //- Сам iframe с видео лежит в modal.js, во имя lazy load

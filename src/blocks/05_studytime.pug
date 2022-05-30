@@ -1,0 +1,21 @@
+include ../components/button.pug
+
+section.studytime
+  .studytime__container.container
+    .studytime__head.head
+      h2 Обучайтесь в удобное для вас время
+    .studytime__body
+      .studytime__times 
+        .studytime__times-item
+          img(src="./img/times/1.png", alt="")
+          h4 Теоретические занятия
+          span с 20:00 до 22:00
+          span пн-пт
+        .studytime__times-item
+          img(src="./img/times/2.png", alt="")
+          h4 Практические занятия
+          span с 07:00 до 20:00
+          span пн-сб
+      .studytime__info 
+        p График занятий по вождению составляется индивидуально для каждого ученика. <br> Инструктор свяжется с Вами и поможет подобрать Вам наиболее удобное время.
+      +button('Записаться <br>на пробное занятие')

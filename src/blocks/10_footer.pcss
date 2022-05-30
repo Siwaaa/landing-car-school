@@ -1,0 +1,45 @@
+.footer {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__links {
+    margin-right: 8%;
+    font-weight: 600;
+    font-size: 20px;
+    & > img {
+      object-fit: contain;
+      width: 150px;
+      margin-bottom: 15px;
+    }
+  }
+  &__messengers {
+    & > h4 {
+      margin-bottom: 10px;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & > ul {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+
+      & > li {
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 10px;
+
+        &:first-child {
+          font-weight: 600;
+          font-size: 20px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

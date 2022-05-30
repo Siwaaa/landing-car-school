@@ -1,0 +1,133 @@
+.steps {
+  --z-10: 10;
+  --z-5: 5;
+  --z-0: -1;
+
+  &__body {
+    height: 100%;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 160px 180px 186px;
+    gap: 15% 5%;
+
+    @media (--xl) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 5% 5%;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #EDEDED;
+      border-radius: var(--border-radius);
+      font-weight: 500;
+      font-size: 28px;
+      padding: 10px 25px;
+
+      & > span {
+        font-weight: 600;
+        font-size: 16px;
+        text-align: right;
+        color: #B5B8C0;
+        z-index: var(--z-10);
+      }
+      & > h4 {
+        z-index: var(--z-10);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: -5px;
+        width: 103%;
+        height: 75%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+        border-radius: var(--border-radius);
+      }
+
+      &:nth-child(1) {
+        background: url(../img/steps/1.png) left/contain no-repeat;
+      }
+      &:nth-child(2) {
+        background: url(../img/steps/2.png) left/contain no-repeat;
+      }
+      &:nth-child(3) {
+        background: url(../img/steps/3.png) left/contain no-repeat;
+      }
+      &:nth-child(4) {
+        background: url(../img/steps/4.png) center/contain no-repeat;
+      }
+      &:nth-child(5) {
+        background: url(../img/steps/5.png) center/contain no-repeat;
+      }
+      &:nth-child(6) {
+        background: url(../img/steps/6.png) left/contain no-repeat;
+      }
+      &:nth-child(7) {
+        background: url(../img/steps/7.png) left/contain no-repeat;
+      }
+
+      &-spec {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        background: #FAFBFF;
+        border: 1px solid #EDEDED;
+        border-radius: var(--border-radius);
+        padding: 20px 25px;
+        z-index: 0;
+
+        font-weight: 600;
+        font-size: 20px;
+
+        @media (--xl) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 5;
+          grid-row-end: 6;
+        }
+
+        & > h3 {
+          margin-bottom: 15px;
+        }
+        &-btn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          & > p {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 20px;
+            color: #B5B8C0;
+            text-align: right;
+            margin-left: 50px;
+
+            &:before {
+              content: '';
+              display: block;
+              width: 70px;
+              height: 10px;
+              background: url('../img/steps/left.svg') center/contain no-repeat;
+              margin-right: 35px;
+            }
+
+            @media(--xl) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

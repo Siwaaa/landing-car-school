@@ -1,0 +1,43 @@
+include ../components/button.pug
+section.garant
+  .garant__container.container
+    .garant__head.head
+      h2 Гарантируем качественное и полное обучение
+    .garant__body
+      ul.garant__nav
+        li Категория А
+        li Категория B - МКПП
+        li Категория B - АКПП
+      .garant__content
+        .case#case_1
+          .case__left 
+            img(src="./img/uslugi/a.png", alt="")
+          .case__right
+            .case__usluga
+              span Услуга
+              h2 Категория B - МКПП
+            .case__price 
+              .case__price-item.case__price-price
+                span Цена
+                strong 38 000 ₽
+              .case__price-item.case__price-sale
+                .case__price-sale-comb
+                  span Скидка
+                  strong 3 000 ₽
+                p Для многодетных <br> семей
+              .case__price-item.case__price-ok
+                p <b>Учебно-материальная база</b> соответствует всем действующим требованиям
+            .case__includes
+              h4 Что входит в стоимость
+              ul
+                li 134 часов занятий по теории
+                li 56 часов практики
+                li Литература для обучения
+                li Экзамены, теория и практика
+                li Документы об окончании автошколы
+                li ГСН (бензин)
+            .case__btn 
+              +button('Записаться <br>на пробное занятие')
+              .case__btn-phone 
+                span все подробности по тел.
+                a(href="tel:+74955502148") 8 (495) 550-21-48

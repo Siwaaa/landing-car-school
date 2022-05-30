@@ -1,0 +1,112 @@
+@import url(https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css);
+
+html {
+  font-family: 'Gilroy', sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 16px;
+  @media (--sm) {
+    font-size: 14px;
+  }
+}
+b {
+  font-weight: 600;
+}
+:root {
+  /* color */
+  --color-white: #ffffff;
+  --color-black: #424242;
+  --color-gray: #9F9FA1;
+  --color-blue: #343D58;
+  --color-blue-light: #5D8FF1;
+  --color-blue-f: #5F6885;
+  /* font  */
+  --fz: 14px;
+  --fz-btn: 16px;
+  --fz-h4: 20px;
+  --fz-h2: 36px;
+  /* content */
+  --content-width: 1200px;
+  --container-padding-h: 80px;
+  --container-padding-w: 30px;
+  --border-radius: 10px;
+
+  @media (--xl) {
+    
+  }
+  @media (--lg) {
+    --fz-h2: 28px;
+    --fz-btn: 14px;
+  }
+  @media (--md) {
+    --fz-btn: 14px;
+    --fz-h4: 18px;
+    --container-padding-w: 20px;
+  }
+  @media (--sm) {
+    --container-padding-w: 10px;
+    --container-padding-h: 50px;
+  }
+  @media (--xs) {
+    --fz-h2: 20px;
+  }
+}
+.container {
+  max-width: var(--content-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--container-padding-w);
+  padding-right: var(--container-padding-w);
+  padding-bottom: var(--container-padding-h);
+}
+.head {
+  text-align: center;
+  padding-top: var(--container-padding-h);
+  padding-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+
+  & > h2 {
+    font-weight: 600;
+    font-size: var(--fz-h2);
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+  & > p {
+    margin-top: 20px;
+  }
+
+  &_white {
+    color: #fff;
+  }
+}
+.item-wrapper {
+  background: linear-gradient(0deg, #FCFCFF, #FCFCFF), #F9F9F9;
+  border: 1px solid rgba(122, 118, 229, 0.5);
+  box-shadow: 0px 10px 30px rgba(62, 44, 70, 0.1);
+  border-radius: calc(2 * var(--border-radius));
+}
+
+@import "./reset.css";
+@import "./blocks/*.pcss";
+@import "./components/*.pcss";
+
+/* Animation */
+*[data-animate-on-scroll] {
+  opacity: 0;
+}
+*[data-animate-on-scroll=animated] {
+  opacity: 1;
+  animation: wipe-enter 2s;
+}
+
+@keyframes wipe-enter {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

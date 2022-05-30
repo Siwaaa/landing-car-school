@@ -1,0 +1,39 @@
+include ../components/button.pug
+
+header.header
+  .header__container
+    nav.navpanel
+      include ./00_navbar.pug
+    .header__nav 
+      ul
+        li
+          a(href="/") Категории
+        li
+          a(href="/") Этапы обучения
+        li
+          a(href="/") О нас
+        li
+          a(href="/") График обучения
+        li
+          a(href="/") Контакты
+    .header__main
+      .header__main-wrapper
+        .header__main-left 
+          h1 Стань уверенным водителем <br>и сдай на права всего <br>за 2.5 месяца
+          +button('Записаться <br>на пробное занятие')
+        .header__main-right
+          img(src="./img/header.png", alt="")
+    .header__utp 
+      ul
+        li 
+          img(src="./img/header/1.png", alt="")
+          span Бесплатное пробное занятие
+          p Приходите на первое занятие и оцените качество наших услуг
+        li 
+          img(src="./img/header/2.png", alt="")
+          span Опытные инструкторы
+          p За 15 лет обучили более 5000+ водителей
+        li 
+          img(src="./img/header/3.png", alt="")
+          span Обучение в рассрочку
+          p Оплачивайте обучение в несколько этапов и без процентов

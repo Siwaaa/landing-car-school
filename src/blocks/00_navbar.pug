@@ -1,0 +1,24 @@
+include ../components/button.pug
+
+.navpanel__container
+  .navpanel__logo
+    img(src="./img/logo.png", alt="Логотип")
+  .navpanel__address
+    img(src="./img/iconmap.png", alt="")
+    .navpanel__address-right 
+      span Мы находимся
+      p МО, г. Дзержинский <br> ул. Томлинская, д.9
+  .navpanel__mess
+    include ../components/messengers.pug
+  .navpanel__phone
+    span Единый номер
+    a(href="tel:+74955502148") 8 (495) 550-21-48
+  button(type="button" class="navpanel__cta")
+    img(src="./img/tel.svg", alt="")
+    span Заказать звонок
+  //- .navpanel__mobile 
+  //-   .navpanel__burger 
+  //-     input(type="checkbox" name="burger" id="burger")
+  //-     label(for="burger")
+  //-       .burger_icon
+  //- .navpanel__menu

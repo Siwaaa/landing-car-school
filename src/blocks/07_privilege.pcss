@@ -1,0 +1,37 @@
+.privilege {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    @media (--xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (--sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: 20px 40px;
+    border-radius: var(--border-radius);
+
+    &:nth-child(2n) {
+      background: #E3E8FF;
+    }
+
+    & > img {
+      object-fit: contain;
+      height: 110px;
+      margin-bottom: 10px;
+    }
+    & > h4 {
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    & > p {
+      font-weight: 400;
+    }
+  }
+}

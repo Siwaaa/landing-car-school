@@ -1,0 +1,50 @@
+.studytime {
+  &__body {
+    max-width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  &__times {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+
+      &:first-child {
+        margin-right: 200px;
+      }
+
+      & > img {
+        object-fir: contain;
+        width: 150px;
+        height: 157px;
+        margin-bottom: 25px;
+      }
+      & > h4 {
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      & > span {
+        color: #656D87;
+      }
+    }
+  }
+
+  &__info {
+    font-weight: 600;
+    color: #5F6885;
+    border: 1px solid #E9F0FF;
+    border-radius: 15px;
+    margin-bottom: 70px;
+    padding: 24px 50px;
+    line-height: 1.5;
+  }
+}

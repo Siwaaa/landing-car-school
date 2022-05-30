@@ -1,0 +1,31 @@
+.sale {
+  &__body {
+    --height-sale: 376px;
+    position: relative;
+    padding: 60px;
+    background: #FAFBFF;
+    border: 4px solid #8CADEF;
+    border-radius: calc(2 * var(--border-radius));
+    height: calc(var(--height-sale) * 1.05);
+    z-index: 0;
+
+    & > h2 {
+      font-weight: 600;
+      font-size: var(--fz-h2);
+      line-height: 1.2;
+      margin-bottom: 40px;
+
+      & > strong {
+        color: #5D8FF1;
+      }
+    }
+
+    & > img {
+      position: absolute;
+      bottom: -2px;
+      right: 8px;
+      object-fit: contain;
+      height: var(--height-sale);
+    }
+  }
+}

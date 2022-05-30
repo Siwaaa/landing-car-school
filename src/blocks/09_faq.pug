@@ -1,0 +1,18 @@
+mixin question(title, text)
+  .questions__item 
+    .questions__title
+      h4=title
+    p(class="questions__answer" aria-hidden="true")=text
+
+section.faq
+  .faq__container.container
+    .faq__head.head
+      h2 Вопросы, которые студенты задают нам чаще всего
+    .faq__body
+      .questions
+        +question('Сколько времени займёт весь процесс обучения?')
+        +question('Сколько времени займёт весь процесс обучения?')
+        +question('Сколько времени займёт весь процесс обучения?')
+        +question('Сколько времени займёт весь процесс обучения?')
+        +question('Сколько времени займёт весь процесс обучения?')
+        +question('Сколько времени займёт весь процесс обучения?')
