@@ -7,10 +7,10 @@
  *  */ 
 const modals = [
   document.getElementById('modal1'), // Быстро оставь номер
-  document.getElementById('modal2'), // Оставьте номер, мы перезвоним
-  document.getElementById('modal3'), // Спасибо, скоро вышлем прайс
-  document.getElementById('modal4'), // Видео
-  document.getElementById('modal5') // Видео
+  document.getElementById('modal2'), // Запись на пробное
+  document.getElementById('modal3'), // Подробнее о скидке
+  document.getElementById('modal4'), // Не уходи, старт скоро
+  document.getElementById('modal5') // Заявка принята
 ]
 
 const triggersForModal_1 = document.querySelectorAll("[data-open-modal_1]")
@@ -67,7 +67,7 @@ export function openModal(numberModal) {
 const byebye = (event) => {
   if (!event.toElement && !event.relatedTarget && event.offsetY < 1) {
     setTimeout(() => {
-      openModal(1);
+      openModal(4);
       document.removeEventListener("mouseleave", byebye);
     }, 500);
   }

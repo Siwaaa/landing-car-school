@@ -1,39 +1,39 @@
 
 // lazy loading
 
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyloadImages = document.querySelectorAll("img[data-src]");
-  let lazyloadThrottleTimeout;
+// document.addEventListener("DOMContentLoaded", function () {
+//   const lazyloadImages = document.querySelectorAll("img[data-src]");
+//   let lazyloadThrottleTimeout;
 
-  function lazyload() {
-    if (lazyloadThrottleTimeout) {
-      clearTimeout(lazyloadThrottleTimeout);
-    }
+//   function lazyload() {
+//     if (lazyloadThrottleTimeout) {
+//       clearTimeout(lazyloadThrottleTimeout);
+//     }
 
-    lazyloadThrottleTimeout = setTimeout(function () {
-      lazyloadImages.forEach(function (img) {
-        if ((img.getBoundingClientRect().top - 200 <= window.innerHeight
-          && img.getBoundingClientRect().bottom >= 0)
-          && getComputedStyle(img).display !== "none"
-        ) {
-          const reg = img.nextSibling.firstChild.textContent.split(/"([^"]*)"/g);
-          img.src = reg[1];
-          if(reg[3]) img.srcset = reg[3]
-          img.removeAttribute('data-src')
-        }
-      });
-      if (lazyloadImages.length == 0) {
-        document.removeEventListener("scroll", lazyload);
-        window.removeEventListener("resize", lazyload);
-        window.removeEventListener("orientationChange", lazyload);
-      }
-    }, 200);
-  }
+//     lazyloadThrottleTimeout = setTimeout(function () {
+//       lazyloadImages.forEach(function (img) {
+//         if ((img.getBoundingClientRect().top - 200 <= window.innerHeight
+//           && img.getBoundingClientRect().bottom >= 0)
+//           && getComputedStyle(img).display !== "none"
+//         ) {
+//           const reg = img.nextSibling.firstChild.textContent.split(/"([^"]*)"/g);
+//           img.src = reg[1];
+//           if(reg[3]) img.srcset = reg[3]
+//           img.removeAttribute('data-src')
+//         }
+//       });
+//       if (lazyloadImages.length == 0) {
+//         document.removeEventListener("scroll", lazyload);
+//         window.removeEventListener("resize", lazyload);
+//         window.removeEventListener("orientationChange", lazyload);
+//       }
+//     }, 200);
+//   }
 
-  document.addEventListener("scroll", lazyload);
-  window.addEventListener("resize", lazyload);
-  window.addEventListener("orientationChange", lazyload);
-});
+//   document.addEventListener("scroll", lazyload);
+//   window.addEventListener("resize", lazyload);
+//   window.addEventListener("orientationChange", lazyload);
+// });
 
 // Scroll to #
 
@@ -103,20 +103,20 @@ e.forEach((e => {
 ))
 
 // cookie 
-const cookieModal = document.querySelector('.cookie')
-const closeBtn = document.querySelector('.cookie-close')
+// const cookieModal = document.querySelector('.cookie')
+// const closeBtn = document.querySelector('.cookie-close')
 
-document.addEventListener('DOMContentLoaded', () => {
-  // проверяем после загрузки страницы localStorage на наличие согласия cookie
-  console.log(localStorage.getItem('consent_cookies'));
-  if(localStorage.getItem('consent_cookies')) {
-    cookieModal.style.display = "none";
-  } else {
-    cookieModal.style.display = "block";
-  }
-})
-closeBtn.addEventListener('click', () => {
-  localStorage.setItem('consent_cookies', true);
-  cookieModal.style.display = "none";
-})
+// document.addEventListener('DOMContentLoaded', () => {
+//   // проверяем после загрузки страницы localStorage на наличие согласия cookie
+//   console.log(localStorage.getItem('consent_cookies'));
+//   if(localStorage.getItem('consent_cookies')) {
+//     cookieModal.style.display = "none";
+//   } else {
+//     cookieModal.style.display = "block";
+//   }
+// })
+// closeBtn.addEventListener('click', () => {
+//   localStorage.setItem('consent_cookies', true);
+//   cookieModal.style.display = "none";
+// })
 
