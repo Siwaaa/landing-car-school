@@ -1,5 +1,5 @@
 include ../components/button.pug
-section.garant
+section.garant#uslugi
   .garant__container.container
     .garant__head.head
       h2 Гарантируем качественное и полное обучение
@@ -8,6 +8,12 @@ section.garant
         li Категория А
         li Категория B - МКПП
         li Категория B - АКПП
+      .garant__nav-mob 
+        select(class="my-select" id="uslugi-select")
+          option(disabled value="") Выберите один из вариантов
+          option(value="1") Категория А
+          option(value="2" selected) Категория B - МКПП
+          option(value="3") Категория B - АКПП
       .garant__content
         .case#case_1
           .case__left 
