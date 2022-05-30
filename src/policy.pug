@@ -10,9 +10,9 @@ html(lang="ru")
     link(rel="icon" href="./assets/favicon/32x32.png" size="32x32" type="image/png")
     link(rel="icon" href="./assets/favicon/16x16.png" size="16x16" type="image/png")
     //- Favicon end
-    link(rel="stylesheet", href="index.css")
+    link(rel="stylesheet", href="./index.css")
     style
-      include policy.pcss
+      include policy.css
 
     title AVIRENT CRM – Комплексная автоматизация автопарка
   body
@@ -22,4 +22,4 @@ html(lang="ru")
       include:markdown-it(breaks) ./data/policy.md
     include blocks/10_footer.pug
     //- JS
-    script(src='./js/navbar.js')
+    //- script(src='./js/navbar.js')

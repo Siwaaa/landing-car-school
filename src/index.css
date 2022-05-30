@@ -1,5 +1,9 @@
 @import url(https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css);
 
+@import "./reset.css";
+@import "./blocks/*.pcss";
+@import "./components/*.pcss";
+
 html {
   font-family: 'Gilroy', sans-serif;
   background-color: var(--color-white);
@@ -81,10 +85,6 @@ b {
     color: #fff;
   }
 }
-
-@import "./reset.css";
-@import "./blocks/*.pcss";
-@import "./components/*.pcss";
 
 /* Animation */
 *[data-animate-on-scroll] {

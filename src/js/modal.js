@@ -46,10 +46,15 @@ triggersForModal_4.forEach((e) => {
     event.preventDefault();
     modals[3].style.display = "block";
     document.body.style.overflow = 'hidden';
-    modals[3].querySelector('.iframe').insertAdjacentHTML(
-      'beforeend',
-      `<iframe height="560" src="https://www.youtube.com/embed/Xj6pj12ywN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-    )
+  })
+})
+
+const triggersForModal_5 = document.querySelectorAll("[data-open-modal_5]")
+triggersForModal_5.forEach((e) => {
+  e.addEventListener('click', (event) => {
+    event.preventDefault();
+    modals[3].style.display = "block";
+    document.body.style.overflow = 'hidden';
   })
 })
 
@@ -89,11 +94,10 @@ window.onclick = function(event) {
     case modals[3]:
       modals[3].style.display = "none";
       document.body.style.overflow = "visible"
-      // stop video 
-      // const video = document.getElementById('about_video')
-      // const src = video.src;
-      // video.src = src;
-      modals[3].querySelector('iframe').remove()
+      break;
+    case modals[4]:
+      modals[4].style.display = "none";
+      document.body.style.overflow = "visible"
       break;
     default:
       break;

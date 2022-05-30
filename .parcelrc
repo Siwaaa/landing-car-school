@@ -3,5 +3,8 @@
   "resolvers": ["@parcel/resolver-glob", "..."],
   "transformers": {
     "*.pug": ["@parcel/transformer-pug", "..."]
+  },
+  "optimizers": {
+    "*.css": ["@parcel/optimizer-css", "..."]
   }
 }
