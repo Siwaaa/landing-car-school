@@ -5,9 +5,15 @@ section.garant#uslugi
       h2 Гарантируем качественное и полное обучение
     .garant__body
       ul.garant__nav
-        li Категория А
-        li Категория B - МКПП
-        li Категория B - АКПП
+        li
+          input(type="radio" id="uslugi_desktop_1" name="uslugi_desktop" value="1")
+          label(for="uslugi_desktop_1") Категория А
+        li
+          input(type="radio" id="uslugi_desktop_2" name="uslugi_desktop" value="2" checked)
+          label(for="uslugi_desktop_2") Категория B - МКПП
+        li
+          input(type="radio" id="uslugi_desktop_3" name="uslugi_desktop" value="3")
+          label(for="uslugi_desktop_3") Категория B - АКПП
       .garant__nav-mob 
         select(class="my-select" id="uslugi-select")
           option(disabled value="") Выберите один из вариантов
@@ -21,13 +27,81 @@ section.garant#uslugi
           .case__right
             .case__usluga
               span Услуга
-              h2 Категория B - МКПП
+              h2 Категория А
             .case__img 
               img(src="./img/uslugi/a.png", alt="")
             .case__price 
               .case__price-item.case__price-price
                 span Цена
+                strong 25 000 ₽
+              .case__price-item.case__price-sale
+                .case__price-sale-comb
+                  span Скидка
+                  strong 3 000 ₽
+                p Для многодетных <br> семей
+              .case__price-item.case__price-ok
+                p <b>Учебно-материальная база</b> соответствует всем действующим требованиям
+            .case__includes
+              h4 Что входит в стоимость
+              ul
+                li 112 часов занятий по теории
+                li 18 часов практики
+                li Литература для обучения
+                li Экзамены, теория и практика
+                li Документы об окончании автошколы
+                li ГСН (бензин)
+            .case__btn 
+              +button('Записаться <br>на пробное занятие')(data-open-modal_2)
+              .case__btn-phone 
+                span все подробности по тел.
+                a(href="tel:+74955502148") 8 (495) 550-21-48
+        .case#case_2.active
+          .case__left 
+            img(src="./img/uslugi/b.png", alt="")
+          .case__right
+            .case__usluga
+              span Услуга
+              h2 Категория B - МКПП
+            .case__img 
+              img(src="./img/uslugi/b.png", alt="")
+            .case__price 
+              .case__price-item.case__price-price
+                span Цена
                 strong 38 000 ₽
+              .case__price-item.case__price-sale
+                .case__price-sale-comb
+                  span Скидка
+                  strong 3 000 ₽
+                p Для многодетных <br> семей
+              .case__price-item.case__price-ok
+                p <b>Учебно-материальная база</b> соответствует всем действующим требованиям
+            .case__includes
+              h4 Что входит в стоимость
+              ul
+                li 134 часов занятий по теории
+                li 56 часов практики
+                li Литература для обучения
+                li Экзамены, теория и практика
+                li Документы об окончании автошколы
+                li ГСН (бензин)
+            .case__btn 
+              +button('Записаться <br>на пробное занятие')(data-open-modal_2)
+              .case__btn-phone 
+                span все подробности по тел.
+                a(href="tel:+74955502148") 8 (495) 550-21-48
+        .case#case_3
+          .case__left 
+            img(src="./img/uslugi/b_akp.png", alt="")
+          .case__right
+            .case__usluga
+              span Услуга
+              h2 Категория B - АКПП
+            .case__img 
+              img(src="./img/uslugi/b_akp.png", alt="")
+            .case__price 
+              .case__price-item.case__price-price
+                span Цена
+                strong 45 000 ₽
               .case__price-item.case__price-sale
                 .case__price-sale-comb
                   span Скидка

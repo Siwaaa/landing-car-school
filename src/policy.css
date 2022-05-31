@@ -1,5 +1,6 @@
 .policy {
   padding-top: 100px;
+  line-height: 1.5;
 
   & > h1 {
     font-size: var(--fz-h2);

@@ -4,7 +4,7 @@ const navbarMenu = document.querySelector('.navpanel__menu')
 
 burgerBtn.addEventListener('change', function () {
   if (this.checked) {
-    navbarMenu.style.height = '400px'
+    navbarMenu.style.height = '360px'
   } else {
     navbarMenu.style.height = '0'
   }

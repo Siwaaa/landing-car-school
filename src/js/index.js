@@ -51,6 +51,70 @@ for (let anchor of anchors) {
   })
 }
 
+
+// Animation
+
+const e = document.querySelectorAll("[data-animate-on-scroll]")
+const t = new IntersectionObserver((e => {
+  e.forEach((e => {
+    e.isIntersecting && e.target.setAttribute("data-animate-on-scroll", "animated")
+  }
+  ))
+}), {
+  threshold: 0.25
+});
+
+e.forEach((e => {
+  t.observe(e)
+}
+))
+
+// cookie 
+const cookieModal = document.querySelector('.cookie')
+const closeBtn = document.querySelector('.cookie-close')
+
+document.addEventListener('DOMContentLoaded', () => {
+  // проверяем после загрузки страницы localStorage на наличие согласия cookie
+  console.log(localStorage.getItem('consent_cookies'));
+  if (localStorage.getItem('consent_cookies')) {
+    cookieModal.style.display = "none";
+  } else {
+    cookieModal.style.display = "block";
+  }
+})
+closeBtn.addEventListener('click', () => {
+  localStorage.setItem('consent_cookies', true);
+  cookieModal.style.display = "none";
+})
+
+// uslugi change
+const radiosOpportunities = document.querySelectorAll('input[type=radio][name="uslugi_desktop"]');
+const selectOpportunities = document.getElementById("uslugi-select");
+
+function changeHandlerUslugiDesktop(event) {
+  if (this.value) {
+    document.querySelectorAll('.case').forEach((t) => {
+      t.classList.remove('active')
+    })
+    document.querySelector('#case_' + this.value).classList.add('active')
+    selectOpportunities.value = this.value
+  }
+}
+function changeHandlerOpportunitiesMob(event) {
+  if (event.target.value) {
+    document.querySelectorAll('.case').forEach((t) => {
+      t.classList.remove('active')
+    })
+    document.querySelector('#case_' + event.target.value).classList.add('active')
+    document.querySelector('#uslugi_desktop_' + event.target.value).checked = true
+  }
+}
+
+Array.prototype.forEach.call(radiosOpportunities, function (radio) {
+  radio.addEventListener('change', changeHandlerUslugiDesktop);
+});
+selectOpportunities.addEventListener('change', changeHandlerOpportunitiesMob);
+
 // Accrdions
 const accordionTrigger = document.querySelectorAll(".questions__item"),
   accordionBody = document.querySelectorAll(".questions__answer");
@@ -83,40 +147,3 @@ const accordionsToggle = (triggers, bodyElements) => {
   });
 };
 // accordionsToggle(accordionTrigger, accordionBody);
-
-
-// Animation
-
-const e = document.querySelectorAll("[data-animate-on-scroll]")
-const t = new IntersectionObserver((e => {
-  e.forEach((e => {
-    e.isIntersecting && e.target.setAttribute("data-animate-on-scroll", "animated")
-  }
-  ))
-}), {
-  threshold: 0.25
-});
-
-e.forEach((e => {
-  t.observe(e)
-}
-))
-
-// cookie 
-// const cookieModal = document.querySelector('.cookie')
-// const closeBtn = document.querySelector('.cookie-close')
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   // проверяем после загрузки страницы localStorage на наличие согласия cookie
-//   console.log(localStorage.getItem('consent_cookies'));
-//   if(localStorage.getItem('consent_cookies')) {
-//     cookieModal.style.display = "none";
-//   } else {
-//     cookieModal.style.display = "block";
-//   }
-// })
-// closeBtn.addEventListener('click', () => {
-//   localStorage.setItem('consent_cookies', true);
-//   cookieModal.style.display = "none";
-// })
-

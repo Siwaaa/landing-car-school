@@ -4,7 +4,7 @@ include ../components/button.pug
   .navpanel__logo
     img(src="./img/logo.png", alt="Логотип")
   .navpanel__address
-    img(src="./img/iconmap.png", alt="")
+    img(src="./img/iconmap.png", alt="Карта")
     .navpanel__address-right 
       span Мы находимся
       p МО, г. Дзержинский <br> ул. Томлинская, д.9
@@ -14,12 +14,30 @@ include ../components/button.pug
     span Единый номер
     a(href="tel:+74955502148") 8 (495) 550-21-48
   button(type="button" class="navpanel__cta" data-open-modal_1)
-    img(src="./img/tel.svg", alt="")
+    img(src="./img/tel.svg", alt="Телефон")
     span Заказать звонок
   .navpanel__mobile 
     .navpanel__burger 
       input(type="checkbox" name="burger" id="burger")
       label(for="burger")
         .burger_icon
-          img(src="./img/burger.svg", alt="")
+          img(src="./img/burger.svg")
   .navpanel__menu
+    p Навигация по сайту:
+    ul
+      li
+        a(href="#uslugi" class="navpanel-link") Категории
+      li
+        a(href="#steps" class="navpanel-link") Этапы обучения
+      li
+        a(href="#about" class="navpanel-link") О нас
+      li
+        a(href="#studytime" class="navpanel-link") График обучения
+      li
+        a(href="#maps" class="navpanel-link") Контакты
+    .navpanel__phone
+      span Единый номер
+      a(href="tel:+74955502148") 8 (495) 550-21-48
+    button(type="button" class="navpanel__cta" data-open-modal_1)
+      img(src="./img/tel.svg", alt="Телефон")
+      span Заказать звонок
