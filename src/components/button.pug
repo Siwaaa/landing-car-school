@@ -6,4 +6,8 @@ mixin button(title, type="button", href)
           img(src="./img/btn.svg", alt="")
           p!= title
   else
-    a(href=href target="_blank" class='btn')= title 
+    .btn
+      a(href=href, class='btn__container', style='display: block;')&attributes(attributes)
+        .btn__content 
+          img(src="./img/btn.svg", alt="")
+          p!= title

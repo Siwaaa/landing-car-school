@@ -7,11 +7,97 @@ section.photos#about
   .photos__container.container
     .photos__head.head
       h2 Наша школа — фотогалерея
-      span Нажмите на фото для увеличения
+      //- span Нажмите на фото для увеличения
     .photos__body
       .photos__gallery
         .photos__nav
+          ul
+            li
+              input(type="radio" id="photos_desktop_1" name="photos_desktop" value="1" checked)
+              label(for="photos_desktop_1") Автодром
+            li
+              input(type="radio" id="photos_desktop_2" name="photos_desktop" value="2" )
+              label(for="photos_desktop_2") Учебные классы
+            li
+              input(type="radio" id="photos_desktop_3" name="photos_desktop" value="3")
+              label(for="photos_desktop_3") Выпускники
+            select(class="my-select-photo" id="photos-select")
+              option(disabled value="") Выберите один из вариантов
+              option(value="1" selected) Автодром
+              option(value="2" ) Учебные классы
+              option(value="3") Выпускники
+          .photos__etc
+            img(src="./img/logo.png", alt="Логотип")
+            p Автошкола проверенная временем <br>Обучаем с 2007
         .photos__swiper
+          <div class="swiper mySwiper2 swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/8.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/photos/avtodrom/9.jpg" />
+              </div>
+              </div>
+              <div class="photos__swiper-next"></div>
+              <div class="photos__swiper-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/photos/avtodrom/9.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        .photos__etc.photos__etc-mob
+          img(src="./img/logo.png", alt="Логотип")
+          p Автошкола проверенная временем <br>Обучаем с 2007
       .pluses
         +item('Инструктора постоянно проходят программы по повышению квалификации', 1)
         +item('Обучение вождению по индивидуальному плану', 2)

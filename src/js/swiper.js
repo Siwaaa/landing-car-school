@@ -1,26 +1,19 @@
 import Swiper from './swiper-bundle.min.js'
 
-const swiperProblems = new Swiper('.problems__swiper', {
-  slidesPerView: 1,
-  spaceBetween: 50,
-  CSSWidthAndHeight: true,
+var swiper = new Swiper(".mySwiper", {
   loop: true,
-  grabCursor: true,
-  pagination: {
-    el: '.problems__nav',
-    type: 'bullets',
-  },
+  spaceBetween: 40,
+  slidesPerView: 3,
+  watchSlidesProgress: true
 });
-
-const swiperOtzovy = new Swiper('.otzovy__swiper', {
-  slidesPerView: document.documentElement.clientWidth < 989 ? 1 : 3,
-  centeredSlides: true,
-  spaceBetween: 50,
-  CSSWidthAndHeight: true,
+var swiper2 = new Swiper(".mySwiper2", {
   loop: true,
-  grabCursor: true,
+  spaceBetween: 10,
   navigation: {
-    prevEl: ".otzovy__nav-prev",
-    nextEl: ".otzovy__nav-next",
+    prevEl: ".photos__swiper-prev",
+    nextEl: ".photos__swiper-next"
   },
+  thumbs: {
+    swiper: swiper
+  }
 });
