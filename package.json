@@ -4,7 +4,8 @@
   "description": "",
   "source": [
     "/src/index.pug",
-    "/src/policy.pug"
+    "/src/policy.pug",
+    "/src/docs.pug"
   ],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {

@@ -8,7 +8,11 @@
 
   &__map {
     height: 496px;
-    background-color: red;
+
+    & > iframe {
+      width: 100%;
+      height: 100%;
+    }
 
     @media (--sm) {
       height: 350px;

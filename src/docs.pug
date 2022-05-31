@@ -12,14 +12,20 @@ html(lang="ru")
     //- Favicon end
     link(rel="stylesheet", href="./index.css")
     style
-      include policy.css
+      include docs.css
 
     title Автошкола Автолидер
   body
     nav.navpanel
       include blocks/00_navbar.pug
-    main.policy.container
-      include:markdown-it(breaks) ./data/policy.md
+    main.docs.container
+      .docs__head.head 
+        h2 Документы
+      .docs__body 
+        ul.docs__ul
+          li
+            a(href="http://") Лицензия
+            
     include blocks/10_footer.pug
     //- JS
     //- script(src='./js/navbar.js')

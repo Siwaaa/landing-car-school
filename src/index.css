@@ -53,7 +53,7 @@ b {
     --container-padding-h: 50px;
   }
   @media (--xs) {
-    --fz-h2: 20px;
+    --fz-h2: 24px;
   }
 }
 .container {
