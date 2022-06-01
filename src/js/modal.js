@@ -63,6 +63,13 @@ export function openModal(numberModal) {
   modals[numberModal - 1].style.display = "block";
   document.body.style.overflow = 'hidden';
 }
+// функция закрытия попапов 
+export function closeModals() {
+  modals.forEach(el => {
+    el.style.display = "none";
+    document.body.style.overflow = 'visible';
+  })
+}
 // попап выхода с сайта
 const byebye = (event) => {
   if (!event.toElement && !event.relatedTarget && event.offsetY < 1) {
