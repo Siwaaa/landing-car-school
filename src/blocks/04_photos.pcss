@@ -121,18 +121,22 @@
     }
   }
   &__swiper {
+    display: none;
     --size-prev-next: 50px;
-    width: 58%;
-    height: 500px;
-    @media (--md) {
-      width: 100%;
-      --size-prev-next: 36px;
-    }
-    @media (--xs) {
-      height: 300px;
+    &.active {
+      display: block;
+      width: 58%;
+      height: 500px;
+      @media (--md) {
+        width: 100%;
+        --size-prev-next: 36px;
+      }
+      @media (--xs) {
+        height: 300px;
+      };
     }
 
-    .mySwiper2 {
+    .swiper {
       height: 380px;
       width: 100%;
       border-radius: var(--border-radius);
@@ -140,7 +144,7 @@
         height: 200px;
       }
     }
-    .mySwiper {
+    .swiper-for {
       height: 100px;
       margin-top: 20px;
       @media (--xs) {

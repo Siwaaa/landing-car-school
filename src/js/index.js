@@ -1,4 +1,4 @@
-
+import { initSlider } from "./swiper"
 // lazy loading
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -115,6 +115,36 @@ Array.prototype.forEach.call(radiosOpportunities, function (radio) {
 });
 selectOpportunities.addEventListener('change', changeHandlerOpportunitiesMob);
 
+// photos change
+const radiosPhotos = document.querySelectorAll('input[type=radio][name="photos_desktop"]');
+const selectPhotos = document.getElementById("photos-select");
+
+function changeHandlerPhotosDesktop(event) {
+  if (this.value) {
+    document.querySelectorAll('.photos__swiper').forEach((t) => {
+      t.classList.remove('active')
+    })
+    document.querySelector('#photos_' + this.value).classList.add('active')
+    selectPhotos.value = this.value
+    initSlider()
+  }
+}
+function changeHandlerPhotosMob(event) {
+  if (event.target.value) {
+    document.querySelectorAll('.photos__swiper').forEach((t) => {
+      t.classList.remove('active')
+    })
+    document.querySelector('#photos_' + event.target.value).classList.add('active')
+    document.querySelector('#photos_desktop_' + event.target.value).checked = true
+    initSlider()
+  }
+}
+
+Array.prototype.forEach.call(radiosPhotos, function (radio) {
+  radio.addEventListener('change', changeHandlerPhotosDesktop);
+});
+selectPhotos.addEventListener('change', changeHandlerPhotosMob);
+
 // Accrdions
 const accordionTrigger = document.querySelectorAll(".questions__item"),
   accordionBody = document.querySelectorAll(".questions__answer");
@@ -146,4 +176,4 @@ const accordionsToggle = (triggers, bodyElements) => {
     });
   });
 };
-// accordionsToggle(accordionTrigger, accordionBody);
+accordionsToggle(accordionTrigger, accordionBody);
