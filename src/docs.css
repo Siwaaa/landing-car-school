@@ -1,3 +1,30 @@
 .docs {
-  
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-blue);
+    margin-bottom: 100px;
+  }
+  &__license {
+    margin-right: 50px;
+    & img {
+      object-fit: contain;
+      width: 300px;
+    }
+  }
+  &__ol {
+    flex-basis: 60%;
+
+    & ol {
+      line-height: 2;
+      list-style: auto;
+
+      & a {
+        transition: all .4s ease;
+        &:hover {
+          color: var(--color-blue-light);
+        }
+      }
+    }
+  }
 }

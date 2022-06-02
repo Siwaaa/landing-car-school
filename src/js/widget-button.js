@@ -1,6 +1,6 @@
 const htmlWidget = `
   <div class="header__seti">
-    <a href="/" target="_blank" class="contact-btn" style="background-color:#30cb0d; color: white;"><img src="https://paradigma.website/whatsapp.svg" alt="">Получить КП <br>в WhatsApp</a>
+    <a href="/" target="_blank" class="contact-btn" style="background-color:#30cb0d; color: white;"><img src="https://paradigma.website/whatsapp.svg" alt="">Написать <br>в WhatsApp</a>
 
     <div class="header__phone mobile">
         <a href="tel:+74955502148" class="header__phone-number zphone" style="color: black;"><img src="https://paradigma.website/widget-phone%20(1).png">

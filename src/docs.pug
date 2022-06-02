@@ -22,9 +22,11 @@ html(lang="ru")
       .docs__head.head 
         h2 Документы
       .docs__body 
-        ul.docs__ul
-          li
-            a(href="http://") Лицензия
+        .docs__license 
+          a(href="https://disk.yandex.ru/d/wyfoPgTlWPzeVA" target="_blank")
+            img(src="./img/docs/license.jpg?width=300", alt="Лицензия")
+        .docs__ol
+          include:markdown-it(breaks) ./data/docs.md
             
     include blocks/10_footer.pug
     //- JS
