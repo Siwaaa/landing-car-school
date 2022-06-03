@@ -1,0 +1,2 @@
+var burgerBtn=document.querySelector("#burger"),navbarMenu=document.querySelector(".navpanel__menu");burgerBtn.addEventListener("change",(function(){this.checked?navbarMenu.style.height="360px":navbarMenu.style.height="0"}));var linksNavMobile=document.querySelectorAll(".navpanel-link");linksNavMobile.forEach((function(e){e.addEventListener("click",(function(){burgerBtn.checked=!1,navbarMenu.style.height="0"}))}));
+//# sourceMappingURL=docs.1be660d4.js.map

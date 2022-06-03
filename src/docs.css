@@ -4,17 +4,29 @@
     justify-content: space-between;
     color: var(--color-blue);
     margin-bottom: 100px;
+    @media (--xs) {
+      flex-direction: column;
+    }
   }
   &__license {
     margin-right: 50px;
+    @media (--xs) {
+      text-align: center;
+      margin-right: 0;
+    }
     & img {
       object-fit: contain;
       width: 300px;
+      @media (--md) {
+        width: 200px;
+      }
     }
   }
   &__ol {
     flex-basis: 60%;
-
+    @media (--xs) {
+      padding-left: 20px;
+    }
     & ol {
       line-height: 2;
       list-style: auto;
