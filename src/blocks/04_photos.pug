@@ -1,6 +1,6 @@
 mixin item(text, img)
   .pluses__item
-    img(src=`./img/photos/pluses/${img}.png`)
+    img(src=`./img/photos/pluses/${img}.png` srcset=`./img/photos/pluses/${img}@2x.png 2x` loading="lazy")
     p!= text
 
 section.photos#about

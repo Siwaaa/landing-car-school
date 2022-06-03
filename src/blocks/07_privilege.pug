@@ -1,6 +1,6 @@
 mixin item(title, desc, img)
   .privilege__item
-    img(src=`./img/privilege/${img}.png`)
+    img(src=`./img/privilege/${img}.png` srcset=`./img/privilege/${img}@2x.png 2x` loading="lazy")
     h4= title 
     p= desc
 
