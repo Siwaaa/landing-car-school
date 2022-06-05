@@ -1,4 +1,4 @@
-# Landing for CRM AVIRENT
+# Landing for Car School Автолидер
 
 ## Install dep
 
