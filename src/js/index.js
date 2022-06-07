@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener('load', function () {
   function lazyMap() {
     const containerMap = document.querySelector('.maps__map')
-    const mapFrame = '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4627906fde598113dc51d59c619db7ea33f48d2547634be499496abf84704e4f&amp;source=constructor" frameborder="0"></iframe>'
+    const mapFrame = '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4627906fde598113dc51d59c619db7ea33f48d2547634be499496abf84704e4f&amp;source=constructor" frameborder="0" loading="lazy"></iframe>'
     containerMap.insertAdjacentHTML('afterbegin', mapFrame)
   }
 
