@@ -1,39 +1,50 @@
 import { initSlider } from "./swiper"
+
 // lazy loading
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const lazyloadImages = document.querySelectorAll("img[data-src]");
-//   let lazyloadThrottleTimeout;
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyloadImages = document.querySelectorAll("img[data-src]");
+  let lazyloadThrottleTimeout;
 
-//   function lazyload() {
-//     if (lazyloadThrottleTimeout) {
-//       clearTimeout(lazyloadThrottleTimeout);
-//     }
+  function lazyload() {
+    if (lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }
 
-//     lazyloadThrottleTimeout = setTimeout(function () {
-//       lazyloadImages.forEach(function (img) {
-//         if ((img.getBoundingClientRect().top - 200 <= window.innerHeight
-//           && img.getBoundingClientRect().bottom >= 0)
-//           && getComputedStyle(img).display !== "none"
-//         ) {
-//           const reg = img.nextSibling.firstChild.textContent.split(/"([^"]*)"/g);
-//           img.src = reg[1];
-//           if(reg[3]) img.srcset = reg[3]
-//           img.removeAttribute('data-src')
-//         }
-//       });
-//       if (lazyloadImages.length == 0) {
-//         document.removeEventListener("scroll", lazyload);
-//         window.removeEventListener("resize", lazyload);
-//         window.removeEventListener("orientationChange", lazyload);
-//       }
-//     }, 200);
-//   }
+    lazyloadThrottleTimeout = setTimeout(function () {
+      lazyloadImages.forEach(function (img) {
+        if ((img.getBoundingClientRect().top - 200 <= window.innerHeight
+          && img.getBoundingClientRect().bottom >= 0)
+          && getComputedStyle(img).display !== "none"
+        ) {
+          const reg = img.nextSibling.textContent.split(/"([^"]*)"/g);
+          img.src = reg[1];
+          if(reg[3]) img.srcset = reg[3]
+          img.removeAttribute('data-src')
+        }
+      });
+      if (lazyloadImages.length == 0) {
+        document.removeEventListener("scroll", lazyload);
+        window.removeEventListener("resize", lazyload);
+        window.removeEventListener("orientationChange", lazyload);
+      }
+    }, 200);
+  }
 
-//   document.addEventListener("scroll", lazyload);
-//   window.addEventListener("resize", lazyload);
-//   window.addEventListener("orientationChange", lazyload);
-// });
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+
+window.addEventListener('load', function () {
+  function lazyMap() {
+    const containerMap = document.querySelector('.maps__map')
+    const mapFrame = '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4627906fde598113dc51d59c619db7ea33f48d2547634be499496abf84704e4f&amp;source=constructor" frameborder="0"></iframe>'
+    containerMap.insertAdjacentHTML('afterbegin', mapFrame)
+  }
+
+  setTimeout(lazyMap, 2000)
+})
 
 // Scroll to #
 
