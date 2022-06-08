@@ -20,12 +20,12 @@ section.photos#about
               label(for="photos_desktop_2") Учебные классы
             li
               input(type="radio" id="photos_desktop_3" name="photos_desktop" value="3")
-              label(for="photos_desktop_3") Выпускники
+              label(for="photos_desktop_3") Лицензия
             select(class="my-select-photo" id="photos-select")
               option(disabled value="") Выберите один из вариантов
               option(value="1" selected) Автодром
               option(value="2" ) Учебные классы
-              option(value="3") Выпускники
+              option(value="3") Лицензия
           .photos__etc
             img(src="./img/logo.png", alt="Логотип")
             p Автошкола проверенная временем <br>Обучаем с 2007
@@ -193,6 +193,9 @@ section.photos#about
                 </div>
               </div>
             </div>
+              .photos__swiper#photos_3 
+                a(href="./docs.pug" class="swiper" style="display: block; overflow: hidden") 
+                  img(src="./img/docs/license.jpg", alt="Лицензия автошколы", style="object-fit: contain")
         .photos__etc.photos__etc-mob
           img(src="./img/logo.png", alt="Логотип")
           p Автошкола проверенная временем <br>Обучаем с 2007
