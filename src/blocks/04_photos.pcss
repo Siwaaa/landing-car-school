@@ -69,7 +69,7 @@
           transition: all .4s ease;
           &:hover {
             color: var(--color-white);
-            background: linear-gradient(95.16deg, #6C95E7 -10.96%, #7FAAFF 111.52%);
+            background: linear-gradient(95.16deg, #e76c6c -10.96%, #ff7f7f 111.52%);
           }
 
           @media (--lg) {
@@ -83,7 +83,7 @@
         /* Checked */
         & > input[type=radio]:checked + label {
           color: var(--color-white);
-          background: linear-gradient(95.16deg, #6C95E7 -10.96%, #7FAAFF 111.52%);
+          background: linear-gradient(95.16deg, #e76c6c -10.96%, #ff7f7f 111.52%);
         }
       }
     }
@@ -166,15 +166,16 @@
       border-radius: 50%;
       outline: 0;
       z-index: 10;
+      cursor: pointer;
     }
     &-next {
       right: calc(0.2*var(--size-prev-next));
-      background: url(../img/photos/slide.svg) center/contain no-repeat;
+      background: url(../img/photos/слайдер.svg) center/contain no-repeat;
       transform: rotate(180deg);
     }
     &-prev {
       left: calc(0.6*var(--size-prev-next));
-      background: url(../img/photos/slide.svg) center/contain no-repeat;
+      background: url(../img/photos/слайдер.svg) center/contain no-repeat;
     }
     & img {
       object-fit: cover;
@@ -250,7 +251,7 @@
     calc(100% - 10px) calc(1em + 11px);
   background-size: 6px 6px, 9px 6px;
   background-repeat: no-repeat;
-  background-color: var(--color-blue-light);
+  background-color: #F07474;
   border-radius: var(--border-radius);
   color: var(--color-white);
   font: inherit;
