@@ -12,6 +12,11 @@
     "serve": "parcel serve --port 8080 --open chrome",
     "build": "rm -rf public_html/* && rm -rf .parcel-cache/* && parcel build --public-url ./ --dist-dir public_html && cp -a src/assets/. public_html"
   },
+  "parcelIgnore": [
+    "favicon.ico",
+    "32x32.png",
+    "16x16.png"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Siwaaa/landing-car-school.git"
@@ -35,6 +40,7 @@
     "sharp": "^0.29.3"
   },
   "dependencies": {
-    "imask": "^6.4.2"
+    "imask": "^6.4.2",
+    "parcel-resolver-ignore": "^2.1.1"
   }
 }
